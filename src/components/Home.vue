@@ -8,7 +8,9 @@
         <div class="w-100 d-block d-sm-none"></div>
         <div class="col-4 d-block d-sm-none"></div>
         <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
-          <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+          <router-link to="/calendar">
+            <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+          </router-link>
         </div>
         <div class="col-4 d-block d-sm-none"></div>
       </div>
@@ -21,7 +23,9 @@
         <div class="w-100 d-block d-sm-none"></div>
         <div class="col-4 d-block d-sm-none"></div>
         <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
+        <router-link to="/signup">
           <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
+        </router-link>
         </div>
         <div class="col-4 d-block d-sm-none"></div>
       </div>
@@ -34,7 +38,9 @@
         <div class="w-100 d-block d-sm-none"></div>
         <div class="col-4 d-block d-sm-none"></div>
         <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
+        <router-link to="/about">
           <font-awesome-icon icon="book-open" class="homeCardIcon"/>
+        </router-link>
         </div>
         <div class="col-4 d-block d-sm-none"></div>
       </div>
