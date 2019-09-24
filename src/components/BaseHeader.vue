@@ -32,7 +32,7 @@ export default {
     top: 0;
     left: 0;
     z-index: 5;
-    margin: 5px auto 20px auto;
+    margin: 10px auto 20px auto;
   }
   .noSB {
     text-shadow: 2px 2px 3px #DDD;
@@ -45,7 +45,7 @@ export default {
     border: 7px solid darkgoldenrod;
     border-radius:30%;
     overflow: hidden;
-    box-shadow: 0px 0px 20px darkgoldenrod, 0px 0px 60px white;
+    box-shadow: 0px 0px 10px darkgoldenrod, 0px 0px 40px white;
   }
 
   @media only screen and (max-width: 768px) {

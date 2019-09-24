@@ -1,5 +1,6 @@
 <template>
   <div class="container container-fluid layout-default rounded-bottom" id="HomeContainer">
+
     <div class="homeCardContainer">
       <div class="row">
         <div class="col d-flex align-content-center align-items-center justify-content-center">
@@ -7,14 +8,17 @@
         </div>
         <div class="w-100 d-block d-sm-none"></div>
         <div class="col-4 d-block d-sm-none"></div>
-        <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
+        <div class="col-md-2 col-4 homeCardIconContainer">
           <router-link to="/calendar">
-            <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+              <div class="btn btn-primary homeCardIconButton">
+              <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+            </div>
           </router-link>
         </div>
         <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
+
     <div class="homeCardContainer">
       <div class="row">
         <div class="col d-flex align-content-center align-items-center justify-content-center">
@@ -30,6 +34,7 @@
         <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
+
     <div class="homeCardContainer">
       <div class="row">
         <div class="col d-flex align-content-center align-items-center justify-content-center">
@@ -79,6 +84,13 @@ export default {
     background-color: #6A95BD;
   }
 
+  .homeCardIconContainer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
   .homeCardIcon {
     color: whitesmoke;
     width: 100%;
@@ -91,6 +103,16 @@ export default {
 
   .row {
     padding: 20px;
+  }
+
+  .homeCardIconButton {
+    width: 50%;
+  }
+
+  @media only screen and (min-width: 769px) {
+    .homeCardContainer {
+      margin-bottom: 20px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
