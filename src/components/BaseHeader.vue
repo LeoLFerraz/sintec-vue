@@ -1,6 +1,6 @@
 <template>
   <div class="container container-fluid layout-default rounded-bottom" id="BaseHeaderContainer">
-    <div class="jumbotron jumbotron-fluid p-0 ">
+    <div class="jumbotron jumbotron-fluid p-0">
 
       <!-- Card image -->
       <div class="view overlay text-center">
@@ -32,7 +32,7 @@ export default {
     top: 0;
     left: 0;
     z-index: 5;
-    margin: 0 auto;
+    margin: 5px auto 20px auto;
   }
   .noSB {
     text-shadow: 2px 3px #DDD ;
@@ -42,5 +42,23 @@ export default {
   }
   .jumbotron {
     margin: 0 auto;
+    border: 10px solid darkgoldenrod;
+    border-radius:20%;
+    overflow:hidden
+  }
+
+  @media only screen and (max-width: 768px) {
+    #BaseHeaderContainer {
+      margin: 0 auto;
+    }
+    .jumbotron {
+      border: none;
+      border-radius: 0;
+    }
+    h3, h4 {
+      font-weight: normal !important;
+      font-size: 1.3rem;
+      text-shadow: none !important;
+    }
   }
 </style>

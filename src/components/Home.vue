@@ -62,8 +62,8 @@ export default {
 
   .homeCardIcon {
     color: whitesmoke;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
 
   .homeCardText {
