@@ -35,7 +35,7 @@ export default {
     margin: 5px auto 20px auto;
   }
   .noSB {
-    text-shadow: 2px 2px #DDD ;
+    text-shadow: 2px 2px 3px #DDD;
   }
   .myFontOrange {
     color: hsl(11, 64%, 68%);
@@ -45,7 +45,7 @@ export default {
     border: 7px solid darkgoldenrod;
     border-radius:30%;
     overflow: hidden;
-    box-shadow: 1px 2px rgba(180, 180, 180, 0.5);
+    box-shadow: 7px 3px 10px rgba(190, 190, 190, 0.5);
   }
 
   @media only screen and (max-width: 768px) {

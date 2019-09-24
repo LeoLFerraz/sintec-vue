@@ -5,7 +5,7 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Verifique nosso calendário!</p>
         </div>
-        <div class="col-md-2 col-2 d-flex align-items-center">
+        <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
           <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
         </div>
       </div>
@@ -15,7 +15,7 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Inscreva-se como palestrante :D</p>
         </div>
-        <div class="col-md-2 col-2 d-flex align-items-center">
+        <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
           <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Sobre a SINTEC</p>
         </div>
-        <div class="col-md-2 col-2 d-flex align-items-center">
+        <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
           <font-awesome-icon icon="book-open" class="homeCardIcon"/>
         </div>
       </div>
@@ -81,6 +81,12 @@ export default {
   @media only screen and (max-width: 768px) {
     .row {
       padding: 10px 20px;
+    }
+    .homeCardIconContainer {
+      padding: 0;
+    }
+    .homeCardText {
+      margin: 0;
     }
   }
 </style>
