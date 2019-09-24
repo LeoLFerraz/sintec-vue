@@ -2,31 +2,31 @@
   <div class="container container-fluid layout-default rounded-bottom" id="HomeContainer">
     <div class="homeCardContainer">
       <div class="row">
-        <div class="col">
+        <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Verifique nosso calendário!</p>
         </div>
-        <div class="col-3">
+        <div class="col-md-2 col-2 d-flex align-items-center">
           <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
         </div>
       </div>
     </div>
     <div class="homeCardContainer">
       <div class="row">
-        <div class="col">
-          <p class="homeCardText text-center">Inscreva-se como palestrante!</p>
+        <div class="col d-flex align-content-center align-items-center justify-content-center">
+          <p class="homeCardText text-center">Inscreva-se como palestrante :D</p>
         </div>
-        <div class="col-3">
-          <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+        <div class="col-md-2 col-2 d-flex align-items-center">
+          <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
         </div>
       </div>
     </div>
     <div class="homeCardContainer">
       <div class="row">
-        <div class="col">
-          <p class="homeCardText text-center">Verifique nosso calendário!</p>
+        <div class="col d-flex align-content-center align-items-center justify-content-center">
+          <p class="homeCardText text-center">Sobre a SINTEC</p>
         </div>
-        <div class="col-3">
-          <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+        <div class="col-md-2 col-2 d-flex align-items-center">
+          <font-awesome-icon icon="book-open" class="homeCardIcon"/>
         </div>
       </div>
     </div>
@@ -53,6 +53,10 @@ export default {
     width: 100%;
   }
 
+  .homeCardContainer {
+    padding: 5px 40px;
+  }
+
   .homeCardContainer:nth-child(even) {
     background-color: #0D0628;
   }
@@ -72,5 +76,11 @@ export default {
 
   .row {
     padding: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .row {
+      padding: 10px 20px;
+    }
   }
 </style>

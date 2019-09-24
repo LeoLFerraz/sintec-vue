@@ -8,11 +8,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Header from './components/BaseHeader.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt, faUserPlus, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 Vue.config.productionTip = false
 library.add(faCalendarAlt)
+library.add(faUserPlus)
+library.add(faBookOpen)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // eslint-disable-next-line

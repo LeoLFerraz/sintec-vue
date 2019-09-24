@@ -35,16 +35,17 @@ export default {
     margin: 5px auto 20px auto;
   }
   .noSB {
-    text-shadow: 2px 3px #DDD ;
+    text-shadow: 2px 2px #DDD ;
   }
   .myFontOrange {
     color: hsl(11, 64%, 68%);
   }
   .jumbotron {
     margin: 0 auto;
-    border: 10px solid darkgoldenrod;
-    border-radius:20%;
-    overflow:hidden
+    border: 7px solid darkgoldenrod;
+    border-radius:30%;
+    overflow: hidden;
+    box-shadow: 1px 2px rgba(180, 180, 180, 0.5);
   }
 
   @media only screen and (max-width: 768px) {
@@ -54,11 +55,23 @@ export default {
     .jumbotron {
       border: none;
       border-radius: 0;
+      box-shadow: none;
+    }
+    .card-body {
+      padding: 5px;
     }
     h3, h4 {
       font-weight: normal !important;
-      font-size: 1.3rem;
       text-shadow: none !important;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    hr {
+      display: none;
     }
   }
 </style>
