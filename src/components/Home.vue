@@ -6,7 +6,9 @@
           <p class="homeCardText text-center">Verifique nosso calendário!</p>
         </div>
         <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
-          <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+          <router-link to="/calendar">
+            <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+          </router-link>
         </div>
       </div>
     </div>
@@ -16,7 +18,9 @@
           <p class="homeCardText text-center">Inscreva-se como palestrante :D</p>
         </div>
         <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
-          <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
+          <router-link to="/signup">
+            <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
+          </router-link>
         </div>
       </div>
     </div>
@@ -26,7 +30,9 @@
           <p class="homeCardText text-center">Sobre a SINTEC</p>
         </div>
         <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
-          <font-awesome-icon icon="book-open" class="homeCardIcon"/>
+          <router-link to="/about">
+            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
+          </router-link>
         </div>
       </div>
     </div>
