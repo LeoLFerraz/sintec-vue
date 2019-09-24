@@ -58,7 +58,7 @@ export default {
   }
 
   .homeCardContainer:nth-child(even) {
-    background-color: #0D0628;
+    background-color: #325478;
   }
   .homeCardContainer:nth-child(odd) {
     background-color: #6A95BD;
