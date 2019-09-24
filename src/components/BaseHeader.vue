@@ -1,0 +1,46 @@
+<template>
+  <div class="container container-fluid layout-default rounded-bottom" id="BaseHeaderContainer">
+    <div class="jumbotron jumbotron-fluid p-0 ">
+
+      <!-- Card image -->
+      <div class="view overlay text-center">
+          <img src="../public/img/SINTECLogo.png" class="img-fluid" alt="Logo S.I.N.T.E.C." id="SINTECLogo">
+      </div>
+
+      <!-- Card content -->
+      <div class="card-body text-center">
+        <!-- Title -->
+        <h3 class="noSB myFontOrange font-weight-bolder"><strong>Semana Integrada de Tecnologia e Ciência</strong></h3>
+        <hr>
+        <h4 class="noSB myFontOrange font-weight-bold">21 a 25 de Outubro - Website em construção!</h4>
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'BaseHeader'
+}
+
+</script>
+
+<style scoped>
+  #BaseHeaderContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 0 auto;
+  }
+  .noSB {
+    text-shadow: 2px 3px #DDD ;
+  }
+  .myFontOrange {
+    color: hsl(11, 64%, 68%);
+  }
+  .jumbotron {
+    margin: 0 auto;
+  }
+</style>
