@@ -5,9 +5,12 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Verifique nosso calendário!</p>
         </div>
-        <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
+        <div class="w-100 d-block d-sm-none"></div>
+        <div class="col-4 d-block d-sm-none"></div>
+        <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
           <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
         </div>
+        <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
     <div class="homeCardContainer">
@@ -15,9 +18,12 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Inscreva-se como palestrante :D</p>
         </div>
-        <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
+        <div class="w-100 d-block d-sm-none"></div>
+        <div class="col-4 d-block d-sm-none"></div>
+        <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
           <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
         </div>
+        <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
     <div class="homeCardContainer">
@@ -25,9 +31,12 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Sobre a SINTEC</p>
         </div>
-        <div class="col-md-2 col-2 d-flex align-items-center homeCardIconContainer">
+        <div class="w-100 d-block d-sm-none"></div>
+        <div class="col-4 d-block d-sm-none"></div>
+        <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
           <font-awesome-icon icon="book-open" class="homeCardIcon"/>
         </div>
+        <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
   </div>
@@ -84,9 +93,6 @@ export default {
     }
     .homeCardIconContainer {
       padding: 0;
-    }
-    .homeCardText {
-      margin: 0;
     }
   }
 </style>
