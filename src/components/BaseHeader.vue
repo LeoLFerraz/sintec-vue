@@ -45,7 +45,7 @@ export default {
     border: 7px solid darkgoldenrod;
     border-radius:30%;
     overflow: hidden;
-    box-shadow: 7px 3px 10px rgba(190, 190, 190, 0.5);
+    box-shadow: 0px 0px 20px darkgoldenrod, 0px 0px 60px white;
   }
 
   @media only screen and (max-width: 768px) {
