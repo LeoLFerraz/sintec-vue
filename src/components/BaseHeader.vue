@@ -65,7 +65,7 @@ export default {
       text-shadow: none !important;
     }
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     h4 {
       font-size: 1rem;
