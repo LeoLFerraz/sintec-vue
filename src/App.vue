@@ -17,6 +17,12 @@ export default {
 </script>
 
 <style>
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 body, html {
   overflow-x: hidden;
 }

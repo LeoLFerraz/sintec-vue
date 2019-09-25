@@ -66,10 +66,13 @@ export default {
     z-index: 6;
     margin: 0 auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .homeCardContainer {
     padding: 5px 40px;
+    flex: 1;
   }
 
   .homeCardContainer:nth-child(even) {
