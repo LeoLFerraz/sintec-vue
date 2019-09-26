@@ -1,35 +1,39 @@
 <template>
   <div class="container-fluid layout-default rounded-bottom" id="HomeContainer">
 
-    <div class="homeCardContainer">
+    <div class="homeCardContainer container-fluid">
       <div class="row">
-        <div class="col-2">
-          <router-link to="/about">
-            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
-          </router-link>
+        <div class="col-lg-4 col-md-12 homeColumn">
+          <div class="container-fluid d-flex flex-column align-items-center align-content-center justify-content-center">
+            <div>
+              Calendário
+            </div>
+            <div class="linkIconContainer">
+            <router-link to="/about">
+              <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
+            </router-link>
+            </div>
+          </div>
         </div>
-        <div class="col-2">
-          <router-link to="/about">
-            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
-          </router-link>
+        <div class="col-lg-4 col-md-12 homeColumn">
+          <div class="container-fluid d-flex flex-column align-items-center align-content-center justify-content-center">
+            <div>
+              Inscrever-se
+            </div>
+            <router-link to="/about">
+              <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
+            </router-link>
+          </div>
         </div>
-        <div class="col-2">
-          <router-link to="/about">
-            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
-          </router-link>
-        </div>
-      </div>
-    </div>
-
-    <div class="homeCardContainer">
-      <div class="row">
-        <div class="col d-flex align-content-center align-items-center justify-content-center">
-          <p class="homeCardText text-center">Sobre a SINTEC</p>
-        </div>
-        <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
-        <router-link to="/about">
-          <font-awesome-icon icon="book-open" class="homeCardIcon"/>
-        </router-link>
+        <div class="col-lg-4 col-md-12 homeColumn">
+          <div class="container-fluid d-flex flex-column align-items-center align-content-center justify-content-center">
+            <div>
+              Sobre o Evento
+            </div>
+            <router-link to="/about">
+              <font-awesome-icon icon="book-open" class="homeCardIcon"/>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -58,37 +62,36 @@ export default {
     flex-direction: column;
   }
 
+  .homeColumn {
+    overflow: hidden;
+    padding: 30px 15px;
+  }
+
+  .row {
+    padding: 0;
+  }
+
   .homeCardContainer {
-    padding: 5px 40px;
+    padding: 0;
     flex: 1;
   }
 
-  .homeCardContainer:nth-child(even) {
-    background-color: #325478;
+  .homeColumn:nth-child(even) {
+    background-color: rgba(100,100,200,0.5);
   }
-  .homeCardContainer:nth-child(odd) {
-    background-color: #6A95BD;
-  }
-
-  .homeCardIconContainer {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+  .homeColumn:nth-child(odd) {
+    background-color: rgba(150,120,130,0.5);
   }
 
   .homeCardIcon {
     color: whitesmoke;
     width: 100%;
+    max-width: 150px;
     height: auto;
   }
 
   .homeCardText {
     color: whitesmoke;
-  }
-
-  .row {
-    padding: 20px;
   }
 
   .homeCardIconButton {

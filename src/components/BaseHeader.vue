@@ -2,7 +2,7 @@
   <div class="container-fluid layout-default rounded-bottom" id="BaseHeaderContainer">
       <!-- Card image -->
       <div class="text-center">
-          <img src="../public/img/SINTECLogo.png" class="img-fluid" alt="Logo S.I.N.T.E.C." id="SINTECLogo" style="background-color:white;">
+          <img src="../public/img/SINTECLogoInverted.png" class="img-fluid" alt="Logo S.I.N.T.E.C." id="SINTECLogo">
       </div>
 
       <!-- Card content -->
