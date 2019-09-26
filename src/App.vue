@@ -28,7 +28,6 @@ body, html {
 }
 body {
   margin: auto;
-  max-width: 1600px;
   background: url("./public/img/SINTECBackgroundImage.jpg") no-repeat;
   background-size: cover;
   min-height: 100vh;

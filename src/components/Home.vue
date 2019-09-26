@@ -1,37 +1,23 @@
 <template>
-  <div class="container container-fluid layout-default rounded-bottom" id="HomeContainer">
+  <div class="container-fluid layout-default rounded-bottom" id="HomeContainer">
 
     <div class="homeCardContainer">
       <div class="row">
-        <div class="col d-flex align-content-center align-items-center justify-content-center">
-          <p class="homeCardText text-center">Verifique nosso calendário!</p>
-        </div>
-        <div class="w-100 d-block d-sm-none"></div>
-        <div class="col-4 d-block d-sm-none"></div>
-        <div class="col-md-2 col-4 homeCardIconContainer">
-          <router-link to="/calendar">
-              <div class="btn btn-primary homeCardIconButton">
-              <font-awesome-icon icon="calendar-alt" class="homeCardIcon"/>
-            </div>
+        <div class="col-2">
+          <router-link to="/about">
+            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
           </router-link>
         </div>
-        <div class="col-4 d-block d-sm-none"></div>
-      </div>
-    </div>
-
-    <div class="homeCardContainer">
-      <div class="row">
-        <div class="col d-flex align-content-center align-items-center justify-content-center">
-          <p class="homeCardText text-center">Inscreva-se como palestrante :D</p>
+        <div class="col-2">
+          <router-link to="/about">
+            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
+          </router-link>
         </div>
-        <div class="w-100 d-block d-sm-none"></div>
-        <div class="col-4 d-block d-sm-none"></div>
-        <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
-        <router-link to="/signup">
-          <font-awesome-icon icon="user-plus" class="homeCardIcon"/>
-        </router-link>
+        <div class="col-2">
+          <router-link to="/about">
+            <font-awesome-icon icon="book-open" class="homeCardIcon"/>
+          </router-link>
         </div>
-        <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
 
@@ -40,14 +26,11 @@
         <div class="col d-flex align-content-center align-items-center justify-content-center">
           <p class="homeCardText text-center">Sobre a SINTEC</p>
         </div>
-        <div class="w-100 d-block d-sm-none"></div>
-        <div class="col-4 d-block d-sm-none"></div>
         <div class="col-md-2 col-4 d-flex align-items-center homeCardIconContainer">
         <router-link to="/about">
           <font-awesome-icon icon="book-open" class="homeCardIcon"/>
         </router-link>
         </div>
-        <div class="col-4 d-block d-sm-none"></div>
       </div>
     </div>
   </div>
