@@ -10,11 +10,13 @@ import Header from './components/BaseHeader.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCalendarAlt, faUserPlus, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayersText, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 Vue.config.productionTip = false
 library.add(faCalendarAlt)
 library.add(faUserPlus)
 library.add(faBookOpen)
+library.add(faFacebook)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
