@@ -5,7 +5,7 @@
         <router-link :to="link">
           <font-awesome-layers full-width class="fa-10x container-fluid">
             <font-awesome-icon :icon="icon" class="homeCardIcon"/>
-            <font-awesome-layers-text class="texto" transform="shrink-12" :value="titulo" />
+            <font-awesome-layers-text class="texto" :value="titulo" />
           </font-awesome-layers>
         </router-link>
       </div>
@@ -23,12 +23,14 @@ export default {
 <style scoped>
   .homeColumn:nth-child(even) {
     background-color: rgba(100,100,200,0.5);
+    border-bottom: solid 8px rgb(100,100,200);
   }
   .homeColumn:nth-child(odd) {
     background-color: rgba(150,120,130,0.5);
+    border-bottom: solid 8px rgb(150,120,130);
   }
   .homeCardIcon {
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.2);
     width: 100%;
     max-width: 150px;
     height: auto;
@@ -40,6 +42,28 @@ export default {
     color: #FFFFFF;
     font-weight: bold;
     white-space: nowrap;
-    text-shadow: 3px 3px #000000;
+    text-shadow: 8px 8px 35px #000000;
+    font-size: 2.5rem;
+  }
+
+  .homeColumn:nth-child(even):hover {
+    background-color: rgba(100,100,200,0.8);
+  }
+  .homeColumn:nth-child(odd):hover {
+    background-color: rgba(150,120,130,0.8);
+  }
+
+  @media only screen and (max-width:768px) {
+    .texto {
+      font-size: 2rem;
+    }
+
+    .homeCardIcon {
+      max-width: 75px;
+    }
+
+    .homeColumn {
+      padding: 5px;
+    }
   }
 </style>

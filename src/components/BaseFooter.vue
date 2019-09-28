@@ -1,11 +1,16 @@
 <template>
-  <div class="container-fluid baseFooterContainer">
-    <div class="sponsorLogosContainer">
+  <div class="container-fluid baseFooterContainer row">
+    <div class="sponsorLogosContainer d-flex justify-content-center align-content-center align-items-center col-lg-6 col-md-12">
       <img src="../public/img/UNIRIOLogo.png" class="sponsorLogo">
     </div>
-    <div class="socialMediaContainer d-flex justify-content-center align-content-center align-items-center">
-      <div class="socialMediaText">Siga-nos no facebook:</div>
-      <font-awesome-icon class="socialMediaIcon" :icon="{ prefix: 'fab', iconName: 'facebook' }"></font-awesome-icon>
+    <div class="socialMediaContainer d-flex flex-column justify-content-center align-content-center align-items-center col-lg-6 col-md-12">
+      <div class="d-flex justify-content-center align-content-center align-items-center">
+        <div class="socialMediaText">Siga-nos no facebook:</div>
+        <font-awesome-icon class="socialMediaIcon" :icon="{ prefix: 'fab', iconName: 'facebook' }"></font-awesome-icon>
+      </div>
+      <div>
+        <div class="socialMediaText">CCET: Av. Pasteur, 458, Urca - Rio de Janeiro</div>
+      </div>
     </div>
   </div>
 </template>
@@ -23,10 +28,8 @@ export default {
     justify-content: space-around;
   }
 
-  .socialMediaContainer {
-  }
-
   .sponsorLogo {
+    width: 100%;
     max-width: 200px;
     padding: 10px 0;
   }
@@ -39,8 +42,18 @@ export default {
   }
 
   .socialMediaText {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: white;
     padding: 1rem;
+  }
+
+  @media only screen and (max-width:768px) {
+    .socialMediaText {
+      font-size: 1rem;
+    }
+  }
+
+  .row {
+    margin: 0;
   }
 </style>

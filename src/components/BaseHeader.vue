@@ -10,7 +10,7 @@
         <!-- Title -->
         <h3 class="noSB myFontOrange font-weight-bolder"><strong>Semana Integrada de Tecnologia e Ciência</strong></h3>
         <hr>
-        <h4 class="noSB myFontOrange font-weight-bold">21 a 25 de Outubro - Website em construção!</h4>
+        <h4 class="noSB myFontOrange font-weight-bold">21 a 25 de Outubro</h4>
       </div>
   </div>
 </template>

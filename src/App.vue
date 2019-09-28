@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column justify-content-between">
     <BaseHeader id="header"/>
     <router-view/>
     <BaseFooter id="footer"/>

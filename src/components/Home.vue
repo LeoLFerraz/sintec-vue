@@ -2,9 +2,9 @@
   <div class="container-fluid layout-default rounded-bottom" id="HomeContainer">
     <div class="homeCardContainer container-fluid">
       <div class="row">
-        <HomeCard titulo="Calendário" icon="calendar-alt" link="/about" />
-        <HomeCard titulo="Inscrever-se" icon="user-plus" link="/about" />
-        <HomeCard titulo="Sobre o Evento" icon="book-open" link="/about" />
+        <HomeCard titulo="Calendário" icon="calendar-alt" link="/calendario" />
+        <HomeCard titulo="Inscrever-se" icon="user-plus" link="/inscricao" />
+        <HomeCard titulo="Sobre o Evento" icon="book-open" link="/sobre" />
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@ export default {
 
   @media only screen and (max-width: 768px) {
     .row {
-      padding: 10px 20px;
+      padding: 10px 0px;
     }
   }
 </style>
