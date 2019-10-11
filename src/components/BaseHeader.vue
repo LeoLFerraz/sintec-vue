@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid layout-default rounded-bottom" id="BaseHeaderContainer">
       <!-- Card image -->
-      <div class="text-center">
-          <img src="../public/img/SINTECLogoInverted.png" class="img-fluid" alt="Logo S.I.N.T.E.C." id="SINTECLogo">
+      <div id="logoContainer" style="overflow: hidden; text-align: center; height: 150px;">
+          <img src="../public/img/SINTECPlus.svg" alt="Logo SINTEC+" id="SINTECLogo" style="height: 100%; width:auto; margin: 0 -100%">
       </div>
 
       <!-- Card content -->
@@ -25,6 +25,13 @@ export default {
 <style scoped>
   #BaseHeaderContainer {
     width: 100%;
+  }
+
+  #logoContainer {
+    overflow: hidden;
+    text-align: center;
+    height: 150px;
+    margin: 10px 0;
   }
 
   .subtitle {
