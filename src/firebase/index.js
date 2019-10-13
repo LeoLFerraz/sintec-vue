@@ -12,4 +12,12 @@ export const firebaseApp = firebase.initializeApp({
   messagingSenderId: variables.messagingSenderId,
   appId: variables.appId,
   measurementId: variables.measurementId
-});
+})
+
+export default function install (Vue) {
+  Object.defineProperty(Vue.prototype, '$firebase', {
+    get () {
+      return firebaseApp
+    }
+  })
+}

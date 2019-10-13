@@ -14,6 +14,18 @@ export default {
   components: {
     BaseHeader,
     BaseFooter
+  },
+  mounted () {
+    let evento = {
+      nome: 'Abertura',
+      inicio: '5:00 PM',
+      fim: '5:15 PM',
+      local: 'Auditório Tércio Pacitti',
+      palestrante: 'Nenhum',
+      status: 'Especial',
+      resumo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel pharetra diam. Ut at diam ultrices, facilisis ligula quis, interdum purus. Donec imperdiet augue sit amet lectus auctor varius. Vivamus a lacus vulputate, egestas leo in, luctus libero. Praesent nec porttitor ex. Vivamus tortor neque, feugiat non luctus sed, semper nec orci. Nullam luctus ex malesuada erat laoreet, tempor molestie augue rhoncus. Fusce at purus dolor. Fusce nec purus sit amet orci ultrices posuere. Integer molestie, nulla id scelerisque mattis, quam sem mattis magna, a malesuada eros purus sed felis. Duis mollis, diam nec ultrices vulputate, diam neque cursus nibh, eu tempus libero tortor a sapien.'
+    }
+    this.$firebase.database().ref('calendario').child('dia_21').child('evento3').set(evento)
   }
 }
 

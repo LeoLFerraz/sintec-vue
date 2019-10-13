@@ -11,8 +11,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCalendarAlt, faUserPlus, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayersText, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import Firebase from './firebase'
 
 Vue.config.productionTip = false
+Vue.use(Firebase)
 library.add(faCalendarAlt)
 library.add(faUserPlus)
 library.add(faBookOpen)
