@@ -1,15 +1,27 @@
 <template>
   <div class="container-fluid baseFooterContainer row">
     <div class="sponsorLogosContainer d-flex justify-content-center align-content-center align-items-center col-lg-6 col-md-12">
-      <img src="../public/img/UNIRIOLogo.png" class="sponsorLogo">
+      <a href="http://www.unirio.br/" target="_blank">
+        <img src="../public/img/UNIRIOLogo2.png" class="sponsorLogo">
+      </a>
     </div>
     <div class="socialMediaContainer d-flex flex-column justify-content-center align-content-center align-items-center col-lg-6 col-md-12">
       <div class="d-flex justify-content-center align-content-center align-items-center">
-        <div class="socialMediaText">Siga-nos no facebook:</div>
-        <font-awesome-icon class="socialMediaIcon" :icon="{ prefix: 'fab', iconName: 'facebook' }"></font-awesome-icon>
+        <a href="https://www.facebook.com/sintecunirio/" target="_blank" class="socialMediaLink">
+          <div class="socialMediaText">Siga-nos no facebook:</div>
+        </a>
+        <a href="https://www.facebook.com/sintecunirio/" target="_blank">
+          <font-awesome-icon class="socialMediaIcon" :icon="{ prefix: 'fab', iconName: 'facebook' }"></font-awesome-icon>
+        </a>
       </div>
       <div>
-        <div class="socialMediaText">CCET: Av. Pasteur, 458, Urca - Rio de Janeiro</div>
+        <div class="socialMediaText text-center">
+          <a href="https://goo.gl/maps/kasRYdWr8Y3LTUMn7" target="_blank" class="socialMediaLink">
+            <font-awesome-icon class="socialMediaIcon" :icon="{ prefix: 'fa', iconName: 'map-marker' }"></font-awesome-icon>
+            CCET: Av. Pasteur, 458, Urca - Rio de Janeiro <br>
+            <small>(clique para abrir o mapa)</small>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -23,7 +35,7 @@ export default {
 
 <style scoped>
   .baseFooterContainer {
-    background-color: rgba(100,100,100,0.2);
+    background-color: rgba(180,180,180,0.28);
     display: flex;
     justify-content: space-around;
   }
@@ -41,6 +53,14 @@ export default {
     border-radius:50%;
   }
 
+  .socialMediaLink {
+    color: inherit;
+  }
+
+  .socialMediaLink:hover {
+    text-decoration: none;
+  }
+
   .socialMediaText {
     font-size: 1.3rem;
     color: white;
@@ -50,6 +70,11 @@ export default {
   @media only screen and (max-width:768px) {
     .socialMediaText {
       font-size: 1rem;
+    }
+
+    .sponsorLogo {
+      padding-top: 5px;
+      padding-bottom: 0;
     }
   }
 

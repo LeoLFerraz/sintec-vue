@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Calendar from '@/components/Calendar'
+import Inscricao from '@/components/Inscricao'
+import Calendario from '@/components/Calendario'
+import Sobre from '@/components/Sobre'
 
 Vue.use(Router)
 
@@ -13,9 +15,19 @@ export default new Router({
       component: Home
     },
     {
+      path: '/inscricao',
+      name: 'Inscricao',
+      component: Inscricao
+    },
+    {
       path: '/calendario',
-      name: 'Calendar',
-      component: Calendar
+      name: 'Calendario',
+      component: Calendario
+    },
+    {
+      path: '/sobre',
+      name: 'Sobre',
+      component: Sobre
     }
   ]
 })

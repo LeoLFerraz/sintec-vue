@@ -1,15 +1,16 @@
 <template>
   <div class="container-fluid layout-default rounded-bottom" id="BaseHeaderContainer">
+    <router-link to="/" href="/index.html" style="cursor: pointer">
       <!-- Card image -->
-      <div class="text-center">
-          <img src="../public/img/SINTECLogoInverted.png" class="img-fluid" alt="Logo S.I.N.T.E.C." id="SINTECLogo">
+      <div id="logoContainer">
+          <img src="../public/img/SINTECPlus.svg" alt="Logo SINTEC+" id="SINTECLogo">
       </div>
+    </router-link>
 
       <!-- Card content -->
       <div class="subtitle text-center">
         <!-- Title -->
-        <h3 class="noSB myFontOrange font-weight-bolder"><strong>Semana Integrada de Tecnologia e Ciência</strong></h3>
-        <hr>
+        <h3 class="noSB myFontOrange font-weight-bolder"><strong>Semana Integrada de Tecnologia, Ciência e Cultura</strong></h3>
         <h4 class="noSB myFontOrange font-weight-bold">21 a 25 de Outubro</h4>
       </div>
   </div>
@@ -23,32 +24,49 @@ export default {
 </script>
 
 <style scoped>
-  #BaseHeaderContainer {
+  #header {
     width: 100%;
+    background-color: rgba(100,100,100,0.2) !important;
+  }
+
+  #logoContainer {
+    overflow: hidden;
+    text-align: center;
+    height: 150px;
+    margin: 20px 0 30px 0;
+  }
+
+  #SINTECLogo {
+    height: 100%;
+    width: auto;
+    margin: 0 -100%;
   }
 
   .subtitle {
-    background-color: rgba(100,100,100,0.2);
     margin: 10px auto;
     padding: 10px 0;
   }
 
   .myFontOrange {
-    color: hsl(11, 64%, 68%);
+    color: hsl(183, 100%, 96%);
+  }
+
+  @media only screen and (max-width: 1028px) {
+    #logoContainer {
+      height: 100px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
     #BaseHeaderContainer {
       margin: 0 auto;
     }
-    .jumbotron {
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
+
+    #logoContainer {
+      height: 40px;
+      margin: 15px 0;
     }
-    .card-body {
-      padding: 5px;
-    }
+
     h3, h4 {
       font-weight: normal !important;
       text-shadow: none !important;
@@ -61,6 +79,10 @@ export default {
     }
     hr {
       display: none;
+    }
+
+    .subtitle {
+      margin-bottom: 2px;
     }
   }
 </style>
