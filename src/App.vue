@@ -9,11 +9,17 @@
 <script>
 import BaseHeader from './components/BaseHeader'
 import BaseFooter from './components/BaseFooter'
+import Calendario from './components/Calendario'
+import Inscricao from './components/Inscricao'
+import Sobre from './components/Sobre'
 export default {
   name: 'App',
   components: {
     BaseHeader,
-    BaseFooter
+    BaseFooter,
+    Calendario,
+    Inscricao,
+    Sobre
   }
 }
 
@@ -24,6 +30,11 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.access-button {
+  visibility: hidden;
+  display: none;
 }
 
 body, html {
