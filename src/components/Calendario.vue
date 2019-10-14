@@ -1,14 +1,22 @@
 <template>
-  <div class="container-fluid calendarText d-flex justify-content-center align-items-center align-content-center">
-    <ul>
-      <li v-for="(dia, name) in calendario" :key="name">
-        {{name.replace('_',' ')}}
+  <div>
+    <div id="internalLinks" style="color: white" class="d-flex align-content-center align-items-center justify-content-center">
+      <ul class="list-inline list-unstyled d-flex align-content-around align-items-around justify-content-around w-100" style="margin-bottom: 0; padding: 0;">
+        <li v-for="(dia, name) in calendario" :key="name">
+          <a class="internalLink" :href="'#' + name">{{name.replace('_', ' ').replace('d', 'D')}}</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="container-fluid calendarText">
+      <li class="diaLi" v-for="(dia, name) in calendario" :key="name">
+        <span class="diaText" :id="name">out. <span class="diaNumber">{{name.substring(4,7)}}</span></span>
         <ul>
           <li v-for="(evento, name) in dia" :key="name">
-            {{evento.nome}}
+            <span class="nomeText">{{evento.nome}}</span>
             <ul>
               <li>Palestrante: {{evento.palestrante}}</li>
-              <li>Horário: {{evento.inicio + "-" + evento.fim}}</li>
+              <li>Horário: {{evento.inicio.substring(0,2) + 'h ' + evento.inicio.substring(2,4) + 'min' + " - " +
+                evento.fim.substring(0,2) + 'h ' + evento.fim.substring(2,4) + 'min'}}</li>
               <li>Resumo: {{evento.resumo}}</li>
             </ul>
           </li>
@@ -23,8 +31,7 @@
 export default {
   name: 'Calendario',
   data: () => ({
-    calendario: [],
-    data: 21
+    calendario: []
   }),
   created () {
     this.getData()
@@ -72,43 +79,50 @@ export default {
     background: rgb(47, 61, 247);
     background: linear-gradient(36deg, rgba(47, 61, 247, 1) 0%, rgba(196, 75, 138, 1) 100%);
     border-radius: 25px;
-    padding: 30px 20px;
+    padding: 20px 0px;
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
   }
 
-  #calendarContainer {
-    position: relative;
-    height: 100%;
+  #internalLinks {
+    max-width: 1000px;
+    margin: 10px auto 0 auto;
+    position: sticky;
+    top: 10px;
+    background-color: rgba(29, 32, 33, 0.98)
   }
 
-  .aboutIcon {
-    width: 55px;
-    position: absolute;
+  .nomeText {
+    font-size: 1.2em;
   }
 
-  #rookSvg {
-    top: -4rem;
-    left: -2.7rem;
+  .diaLi {
+    list-style: none;
+    text-align: center;
   }
 
-  #brainSvg {
-    top: 96%;
-    right: -0.7rem;
+  .diaText {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
+    background-color: rgba(241, 231, 197, 0.9);
+    padding: 0.4em;
+    border-radius: 10px;
+    color: #2F7DE0;
   }
 
-  #controlSvg {
-    top: 102%;
-    left: 0;
+  .diaNumber {
+    font-size:2rem;
   }
 
-  #basketballSvg {
-    top: -3.5rem;
-    right: -2rem;
-    transform: rotate(30deg);
+  .diaLi ul {
+    text-align: left;
   }
+
   ul {
-    margin-bottom: 8px;
+    padding-left: 2em;
+    padding-right: 0.3em;
+    margin-bottom: 15px;
   }
 </style>

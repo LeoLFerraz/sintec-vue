@@ -1,6 +1,7 @@
 <template>
     <div style="color: white">
-      <form>
+      Não disponível em produção!
+      <!--<form>
         <label for="diaEvento">Dia: </label><select type="text" name="diaEvento" id="diaEvento">
         <option value="dia_21">Dia 21</option>
         <option value="dia_22">Dia 22</option>
@@ -22,7 +23,7 @@
         <option value="Especial">Especial</option>
         <option value="Cancelado">Cancelado</option></select>
         <button type="button" id="confirmar" v-on:click="addEvent">Confirmar</button>
-      </form>
+      </form>-->
     </div>
 </template>
 

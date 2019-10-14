@@ -38,8 +38,9 @@ export default {
 }
 
 body, html {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
+
 body {
   margin: auto;
   background: url("./public/img/SINTECBackgroundImage.jpg") no-repeat;
