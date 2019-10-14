@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Inscricao from '@/components/Inscricao'
 import Calendario from '@/components/Calendario'
 import Sobre from '@/components/Sobre'
+import CadastroEvento from '@/components/CadastroEvento'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/sobre',
       name: 'Sobre',
       component: Sobre
+    },
+    {
+      path: '/aaaCadastroEvento',
+      name: 'CadastroEvento',
+      component: CadastroEvento
     }
   ]
 })
