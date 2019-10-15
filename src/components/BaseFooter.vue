@@ -4,6 +4,9 @@
       <a href="http://www.unirio.br/" target="_blank">
         <img src="../public/img/UNIRIOLogo2.png" class="sponsorLogo">
       </a>
+      <a href="https://www.facebook.com/ProjetoDivulga/" target="_blank">
+        <img src="../public/img/ProjetoDivulgarLogo.png" class="sponsorLogo">
+      </a>
     </div>
     <div class="socialMediaContainer d-flex flex-column justify-content-center align-content-center align-items-center col-lg-6 col-md-12">
       <div class="d-flex justify-content-center align-content-center align-items-center">
