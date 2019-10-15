@@ -54,7 +54,8 @@ body {
 
 @media only screen and (max-width: 768px) {
   body {
-    background: #111111;
+    background: url("./public/img/SINTECBackgroundImage.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
