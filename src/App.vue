@@ -32,6 +32,10 @@ export default {
   flex-direction: column;
 }
 
+#barra-ccet {
+  display:none !important;
+}
+
 .access-button {
   visibility: hidden;
   display: none;

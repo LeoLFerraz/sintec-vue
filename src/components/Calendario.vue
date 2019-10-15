@@ -76,8 +76,8 @@ export default {
   .calendarText {
     text-align: justify-all;
     color: white;
-    background: rgb(47, 61, 247);
-    background: linear-gradient(36deg, rgba(47, 61, 247, 1) 0%, rgba(196, 75, 138, 1) 100%);
+    background: rgb(150,120,130);
+    background: linear-gradient(36deg, rgba(150,120,130,1) 0%, rgba(100,100,200,0.7595413165266106) 100%);
     border-radius: 25px;
     padding: 20px 0px;
     width: 90%;
