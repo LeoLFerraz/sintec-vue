@@ -10,13 +10,22 @@
     <ul class="container-fluid calendarText">
       <li class="diaLi" v-for="(dia, name) in calendario" :key="name">
         <span class="diaText" :id="name">out. <span class="diaNumber">{{name.substring(4,7)}}</span></span>
-        <ul>
+        <ul class="diaUl">
           <li v-for="(evento, name) in dia" :key="name">
-            <span class="nomeText">{{evento.nome}}</span>
+              <span class="nomeText row">
+                <div class="col-12 col-md-auto">
+                  {{evento.nome}}
+                </div>
+                <div>
+                  <small>
+                    {{evento.inicio.substring(0,2) + 'h ' + evento.inicio.substring(2,4) + 'min' + " - " +
+                    evento.fim.substring(0,2) + 'h ' + evento.fim.substring(2,4) + 'min'}}
+                  </small>
+                </div>
+              </span>
             <ul>
               <li>Palestrante: {{evento.palestrante}}</li>
-              <li>Horário: {{evento.inicio.substring(0,2) + 'h ' + evento.inicio.substring(2,4) + 'min' + " - " +
-                evento.fim.substring(0,2) + 'h ' + evento.fim.substring(2,4) + 'min'}}</li>
+              <li>Local: {{evento.local}}</li>
               <li>Resumo: {{evento.resumo}}</li>
             </ul>
           </li>
@@ -90,7 +99,9 @@ export default {
     margin: 10px auto 0 auto;
     position: sticky;
     top: 10px;
-    background-color: rgba(29, 32, 33, 0.98)
+    background-color: rgba(29, 32, 33, 0.98);
+    border-radius: 25px;
+    z-index: 2;
   }
 
   .nomeText {
@@ -106,7 +117,7 @@ export default {
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 600;
-    background-color: rgba(241, 231, 197, 0.9);
+    background-color: rgba(241, 231, 197, 0.5);
     padding: 0.4em;
     border-radius: 10px;
     color: #2F7DE0;
@@ -120,9 +131,17 @@ export default {
     text-align: left;
   }
 
+  .diaUl{
+    margin-top: 10px;
+  }
+
   ul {
     padding-left: 2em;
     padding-right: 0.3em;
     margin-bottom: 15px;
+  }
+
+  small {
+    color: #9dffd7;
   }
 </style>
