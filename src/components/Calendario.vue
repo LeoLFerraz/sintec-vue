@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div id="internalLinks" style="color: white" class="d-flex align-content-center align-items-center justify-content-center">
       <ul class="list-inline list-unstyled d-flex align-content-around align-items-around justify-content-around w-100" style="margin-bottom: 0; padding: 0;">
         <li v-for="dia in calendario" :key="dia.dia">
@@ -55,7 +54,11 @@ export default {
     },
     scrollToElement(elemID) {
       let elemYPos = document.getElementById(elemID).offsetTop;
-      window.scrollTo(0,elemYPos);
+      window.scrollTo({
+        top: elemYPos,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   }
 }
@@ -91,6 +94,12 @@ export default {
     border-bottom: 2px #666 solid;
     transition: .3s all;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width:768px) {
+    .internalLink {
+      padding: .3em 1.5em;
+    }
   }
 
   .internalLink:hover {

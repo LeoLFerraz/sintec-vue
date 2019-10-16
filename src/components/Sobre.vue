@@ -62,12 +62,12 @@ export default {
   }
 
   #brainSvg {
-    top: 96%;
+    top: 98%;
     right: -0.7rem;
   }
 
   #controlSvg {
-    top: 102%;
+    top: 100%;
     left: 0;
   }
 
