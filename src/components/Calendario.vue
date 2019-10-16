@@ -105,8 +105,8 @@ export default {
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 600;
-    background-color: rgba(241, 231, 197, 0.5);
-    padding: 0.4em;
+    background-color: rgb(234, 233, 255);
+    padding: .6em .8em .4em;
     border-radius: 10px;
     color: #2F7DE0;
   }
