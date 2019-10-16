@@ -17,17 +17,15 @@
 
         <ul class="diaUl">
           <li v-for="evento in dia.eventos" :key="evento.nome">
-              <span class="nomeText row">
-                <div class="col-12 col-md-auto">
-                  {{evento.nome}}
-                </div>
-                <div>
-                  <small>
-                    {{evento.inicio.substring(0,2) + 'h ' + evento.inicio.substring(2,4) + 'min' + " - " +
-                    evento.fim.substring(0,2) + 'h ' + evento.fim.substring(2,4) + 'min'}}
-                  </small>
-                </div>
-              </span>
+            <div class="event-title">
+              <h3>
+                {{evento.nome}}
+              </h3>
+
+              <small>
+                {{ formatHour(evento.inicio) + " - " + formatHour(evento.fim)}}
+              </small>
+            </div>
             <ul>
               <li>Palestrante: {{evento.palestrante}}</li>
               <li>Local: {{evento.local}}</li>
@@ -51,6 +49,11 @@ export default {
   }),
   async mounted() {
     this.calendario = await calendarService.getCalendar();
+  },
+  methods: {
+    formatHour(hour) {
+      return hour.substring(0,2) + ':' + hour.substring(2,4)
+    }
   }
 }
 </script>
@@ -121,6 +124,18 @@ export default {
 
   .diaUl{
     margin-top: 10px;
+    list-style: none;
+  }
+
+  .event-title {
+    margin: 1.9rem 0 .5rem;
+  }
+
+  .event-title h3 {
+    margin-bottom: 0;
+  }
+  .event-title small {
+    margin-top: -.2em;
   }
 
   ul {
