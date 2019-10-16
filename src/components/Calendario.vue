@@ -1,17 +1,22 @@
 <template>
   <div>
+
     <div id="internalLinks" style="color: white" class="d-flex align-content-center align-items-center justify-content-center">
       <ul class="list-inline list-unstyled d-flex align-content-around align-items-around justify-content-around w-100" style="margin-bottom: 0; padding: 0;">
-        <li v-for="(dia, name) in calendario" :key="name">
-          <a class="internalLink" :href="'#' + name">{{name.replace('_', ' ').replace('d', 'D')}}</a>
+        <li v-for="dia in calendario" :key="dia.dia">
+          <a class="internalLink" :href="'#' + dia.dia">Dia {{dia.dia}}</a>
         </li>
       </ul>
     </div>
+
     <ul class="container-fluid calendarText">
-      <li class="diaLi" v-for="(dia, name) in calendario" :key="name">
-        <span class="diaText" :id="name">out. <span class="diaNumber">{{name.substring(4,7)}}</span></span>
+      <li class="diaLi" v-for="dia in calendario" :key="dia.dia">
+        <span class="diaText">
+          out. <span class="diaNumber">{{ dia.dia }}</span>
+        </span>
+
         <ul class="diaUl">
-          <li v-for="(evento, name) in dia" :key="name">
+          <li v-for="evento in dia.eventos" :key="evento.nome">
               <span class="nomeText row">
                 <div class="col-12 col-md-auto">
                   {{evento.nome}}
@@ -37,48 +42,17 @@
 </template>
 
 <script>
+import calendarService from '../firebase/calendar';
+
 export default {
   name: 'Calendario',
   data: () => ({
     calendario: []
   }),
-  created () {
-    this.getData()
-  },
-  methods: {
-    getData () {
-      let ref = this.$firebase.database().ref('calendario')
-      ref.on('value', data => {
-        this.calendario = data.val()
-        this.sortDias()
-      })
-    },
-    sortDias () {
-      let eventos = []
-      let obj = {}
-      for (let dia in this.calendario) {
-        eventos = []
-        obj[dia] = {}
-        for (let evento in this.calendario[dia]) {
-          eventos.push(evento)
-        }
-        let len = eventos.length
-        for (let i = len; i > 0; i--) {
-          for (let j = 0; j < i - 1; j++) {
-            if (this.calendario[dia][eventos[j]]['inicio'] > this.calendario[dia][eventos[j + 1]]['inicio']) {
-              let tmp = eventos[j]
-              eventos[j] = eventos[j + 1]
-              eventos[j + 1] = tmp
-            }
-          }
-        }
-        eventos.forEach((evento, i) => {
-          obj[dia]['evento' + i] = this.calendario[dia][evento]
-        })
-      }
-      this.calendario = obj
-    }
-  }}
+  async mounted() {
+    this.calendario = await calendarService.getCalendar();
+  }
+}
 </script>
 
 <style scoped>
@@ -96,12 +70,25 @@ export default {
 
   #internalLinks {
     max-width: 1000px;
-    margin: 10px auto 0 auto;
+    margin: 0 auto;
     position: sticky;
-    top: 0px;
+    top: 0;
     background-color: rgba(29, 32, 33, 0.98);
     border-radius:  0 0 25px 25px;
     z-index: 2;
+  }
+
+  .internalLink {
+    padding: .5em 1.5em;
+    color: #eee;
+    display: inline-block;
+    border-bottom: 2px #666 solid;
+    transition: .3s all;
+  }
+
+  .internalLink:hover {
+    border-bottom: 2px #991690 solid;
+    text-decoration: none;
   }
 
   .nomeText {

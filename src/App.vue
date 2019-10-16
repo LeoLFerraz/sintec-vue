@@ -58,8 +58,4 @@ body {
     background-size: cover;
   }
 }
-
-.container-fluid {
-  padding: 0;
-}
 </style>

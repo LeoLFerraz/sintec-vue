@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid layout-default rounded-bottom" id="HomeContainer">
-    <div class="homeCardContainer container-fluid">
-      <div class="row">
+  <div class="layout-default rounded-bottom" id="HomeContainer">
+    <div class="homeCardContainer">
+      <div class="row no-gutters">
         <HomeCard titulo="Calendário" icon="calendar-alt" link="/calendario" />
         <HomeCard titulo="Inscrever-se" icon="user-plus" link="/inscricao" />
         <HomeCard titulo="Sobre o Evento" icon="book-open" link="/sobre" />
@@ -41,24 +41,13 @@ export default {
     padding: 30px 15px;
   }
 
-  .row {
-    padding: 0;
-  }
-
   .homeCardContainer {
-    padding: 0;
     flex: 1;
   }
 
   @media only screen and (min-width: 769px) {
     .homeCardContainer {
       margin-bottom: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    .row {
-      padding: 10px 0px;
     }
   }
 </style>

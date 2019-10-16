@@ -35,7 +35,7 @@ export default {
   #logoContainer {
     overflow: hidden;
     text-align: center;
-    height: 150px;
+    height: 110px;
     margin: 20px 0 10px 0;
   }
 
