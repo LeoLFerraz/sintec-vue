@@ -4,7 +4,7 @@
     <div id="internalLinks" style="color: white" class="d-flex align-content-center align-items-center justify-content-center">
       <ul class="list-inline list-unstyled d-flex align-content-around align-items-around justify-content-around w-100" style="margin-bottom: 0; padding: 0;">
         <li v-for="dia in calendario" :key="dia.dia">
-          <a class="internalLink" :href="'#' + dia.dia">Dia {{dia.dia}}</a>
+          <span class="internalLink" :href="'#' + dia.dia">Dia {{dia.dia}}</span>
         </li>
       </ul>
     </div>
@@ -79,11 +79,12 @@ export default {
   }
 
   .internalLink {
-    padding: .5em 1.5em;
+    padding: .8em 1.5em;
     color: #eee;
     display: inline-block;
     border-bottom: 2px #666 solid;
     transition: .3s all;
+    cursor: pointer;
   }
 
   .internalLink:hover {
