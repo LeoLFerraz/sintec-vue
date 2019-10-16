@@ -98,9 +98,9 @@ export default {
     max-width: 1000px;
     margin: 10px auto 0 auto;
     position: sticky;
-    top: 10px;
+    top: 0px;
     background-color: rgba(29, 32, 33, 0.98);
-    border-radius: 25px;
+    border-radius:  0 0 25px 25px;
     z-index: 2;
   }
 
