@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid layout-default rounded-bottom" id="BaseHeaderContainer">
+  <div class="layout-default rounded-bottom" id="BaseHeaderContainer">
     <router-link to="/" href="/index.html" style="cursor: pointer">
       <!-- Card image -->
       <div id="logoContainer">
