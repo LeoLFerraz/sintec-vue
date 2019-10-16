@@ -4,13 +4,13 @@
     <div id="internalLinks" style="color: white" class="d-flex align-content-center align-items-center justify-content-center">
       <ul class="list-inline list-unstyled d-flex align-content-around align-items-around justify-content-around w-100" style="margin-bottom: 0; padding: 0;">
         <li v-for="dia in calendario" :key="dia.dia">
-          <span class="internalLink" :href="'#' + dia.dia">Dia {{dia.dia}}</span>
+          <span class="internalLink" v-on:click="scrollToElement('dia_' + dia.dia)">Dia {{dia.dia}}</span>
         </li>
       </ul>
     </div>
 
     <ul class="container-fluid calendarText">
-      <li class="diaLi" v-for="dia in calendario" :key="dia.dia">
+      <li class="diaLi" v-for="dia in calendario" :key="dia.dia" :id="'dia_' + dia.dia">
         <span class="diaText">
           out. <span class="diaNumber">{{ dia.dia }}</span>
         </span>
@@ -23,12 +23,11 @@
               </h3>
 
               <small>
-                {{ formatHour(evento.inicio) + " - " + formatHour(evento.fim)}}
+                {{ formatHour(evento.inicio) + " - " + formatHour(evento.fim) + " / " + evento.local}}
               </small>
             </div>
             <ul>
               <li>Palestrante: {{evento.palestrante}}</li>
-              <li>Local: {{evento.local}}</li>
               <li>Resumo: {{evento.resumo}}</li>
             </ul>
           </li>
@@ -53,6 +52,10 @@ export default {
   methods: {
     formatHour(hour) {
       return hour.substring(0,2) + ':' + hour.substring(2,4)
+    },
+    scrollToElement(elemID) {
+      let elemYPos = document.getElementById(elemID).offsetTop;
+      window.scrollTo(0,elemYPos);
     }
   }
 }
