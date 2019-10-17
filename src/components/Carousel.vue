@@ -5,56 +5,37 @@
       v-model="slide"
       :interval="4000"
       controls
-      indicators
-      background="#ababab"
+      no-animation
+      background="#721f1f"
       img-width="1024"
       img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
         <template v-slot:img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
+          <div class="dia">
+            21 de Outubro
+            <h1>DIA DE ABERTURA</h1>
+            <div class="evento">
+              <div class="horario">17:00</div>
+              <div class="titulo">Cerimônia de abertura</div>
+              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            </div>
+            <div class="evento">
+              <div class="horario">17:00</div>
+              <div class="titulo">Cerimônia de abertura</div>
+              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            </div>
+            <div class="evento">
+              <div class="horario">17:00</div>
+              <div class="titulo">Cerimônia de abertura</div>
+              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            </div>
+          </div>
         </template>
       </b-carousel-slide>
-
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
     </b-carousel>
-
-    <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p>
   </div>
 </template>
 
@@ -79,5 +60,22 @@
 </script>
 
 <style scoped>
-
+  .dia{
+    background-color: #721f1f;
+    min-height: 100px;
+    text-align: center;
+    vertical-align: central;
+    color: #FFFFFF;
+  }
+  .horario{
+    color: #9dffd7;
+    display: inline-block;
+  }
+  .descricao{
+    color: #9dffd7;
+  }
+  .titulo{
+    display: inline-block;
+    font-size: 2rem;
+  }
 </style>
