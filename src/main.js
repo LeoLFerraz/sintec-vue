@@ -15,6 +15,7 @@ import calendarService from './firebase/calendar';
 
 Vue.config.productionTip = false;
 Vue.use(Firebase);
+Vue.use(BootstrapVue);
 library.add(faCalendarAlt);
 library.add(faUserPlus);
 library.add(faBookOpen);
@@ -33,5 +34,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 });
-
-Vue.use(BootstrapVue);

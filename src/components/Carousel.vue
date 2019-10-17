@@ -5,13 +5,37 @@
       v-model="slide"
       :interval="4000"
       controls
-      no-animation
-      background="#721f1f"
+      indicators
+      background="#ababab"
       img-width="1024"
       img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
+      <b-carousel-slide>
+        <template v-slot:img>
+          <div class="dia">
+            21 de Outubro
+            <h1>DIA DE ABERTURA</h1>
+            <div class="evento">
+              <div class="horario">17:00</div>
+              <div class="titulo">Cerimônia de abertura</div>
+              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            </div>
+            <div class="evento">
+              <div class="horario">17:00</div>
+              <div class="titulo">Cerimônia de abertura</div>
+              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            </div>
+            <div class="evento">
+              <div class="horario">17:00</div>
+              <div class="titulo">Cerimônia de abertura</div>
+              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            </div>
+          </div>
+        </template>
+      </b-carousel-slide>
       <b-carousel-slide>
         <template v-slot:img>
           <div class="dia">
