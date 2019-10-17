@@ -5,7 +5,6 @@
       v-model="slide"
       :interval="4000"
       controls
-      indicators
       background="#ababab"
       img-width="1024"
       img-height="480"
@@ -13,48 +12,15 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide>
+      <b-carousel-slide v-for="dia in calendario" :key="dia.dia">
         <template v-slot:img>
           <div class="dia">
-            21 de Outubro
+            {{dia.dia}} de Outubro
             <h1>DIA DE ABERTURA</h1>
-            <div class="evento">
-              <div class="horario">17:00</div>
-              <div class="titulo">Cerimônia de abertura</div>
-              <div class="descricao">Com a comissão organizadora da SINTEC</div>
-            </div>
-            <div class="evento">
-              <div class="horario">17:00</div>
-              <div class="titulo">Cerimônia de abertura</div>
-              <div class="descricao">Com a comissão organizadora da SINTEC</div>
-            </div>
-            <div class="evento">
-              <div class="horario">17:00</div>
-              <div class="titulo">Cerimônia de abertura</div>
-              <div class="descricao">Com a comissão organizadora da SINTEC</div>
-            </div>
-          </div>
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide>
-        <template v-slot:img>
-          <div class="dia">
-            21 de Outubro
-            <h1>DIA DE ABERTURA</h1>
-            <div class="evento">
-              <div class="horario">17:00</div>
-              <div class="titulo">Cerimônia de abertura</div>
-              <div class="descricao">Com a comissão organizadora da SINTEC</div>
-            </div>
-            <div class="evento">
-              <div class="horario">17:00</div>
-              <div class="titulo">Cerimônia de abertura</div>
-              <div class="descricao">Com a comissão organizadora da SINTEC</div>
-            </div>
-            <div class="evento">
-              <div class="horario">17:00</div>
-              <div class="titulo">Cerimônia de abertura</div>
-              <div class="descricao">Com a comissão organizadora da SINTEC</div>
+            <div v-for="evento in dia.eventos" :key="evento.nome" class="evento">
+              <div class="horario">{{formatHour(evento.inicio)}}</div>
+              <div class="titulo">{{evento.nome}}</div>
+              <div class="descricao">{{evento.palestrante}}</div>
             </div>
           </div>
         </template>
@@ -64,15 +30,23 @@
 </template>
 
 <script>
-    export default {
+  import calendarService from '../firebase/calendar';
+  export default {
         name: "Carousel",
       data() {
         return {
+          calendario: [],
           slide: 0,
           sliding: null
         }
       },
+      async mounted() {
+        this.calendario = await calendarService.getCalendar();
+      },
       methods: {
+        formatHour(hour) {
+          return hour.substring(0,2) + ':' + hour.substring(2,4)
+        },
         onSlideStart() {
           this.sliding = true
         },
