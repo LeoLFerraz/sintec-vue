@@ -6,7 +6,6 @@
       :interval="4000"
       controls
       indicators
-      background="#ababab"
       img-width="1024"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
@@ -85,11 +84,12 @@
 
 <style scoped>
   .dia{
-    background-color: #721f1f;
+    background-color: rgba(100, 35, 21, 0.31);
     min-height: 100px;
     text-align: center;
     vertical-align: central;
     color: #FFFFFF;
+    padding: 10px 0 50px 0;
   }
   .horario{
     color: #9dffd7;

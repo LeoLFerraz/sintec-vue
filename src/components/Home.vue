@@ -39,10 +39,4 @@ export default {
     display: flex;
     flex-direction: column;
   }
-
-  @media only screen and (min-width: 769px) {
-    .homeCardContainer {
-      margin-bottom: 20px;
-    }
-  }
 </style>
