@@ -7,15 +7,19 @@
         <HomeCard titulo="Sobre o Evento" icon="book-open" link="/sobre" />
       </div>
     </div>
+    <Carousel></Carousel>
   </div>
 </template>
 
 <script>
 import HomeCard from './HomeCard'
+import Carousel from './Carousel'
+
 export default {
   name: 'Home',
   components: {
-    HomeCard
+    HomeCard,
+    Carousel
   },
   data () {
     return {
