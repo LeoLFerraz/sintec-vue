@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="d-flex flex-column justify-content-between">
+  <div id="app" class="container-fluid">
     <BaseHeader id="header"/>
     <router-view/>
     <BaseFooter id="footer"/>
@@ -28,8 +28,7 @@ export default {
 <style>
 #app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
 }
 
 #barra-ccet {

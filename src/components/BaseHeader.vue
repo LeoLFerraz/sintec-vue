@@ -36,7 +36,8 @@ export default {
     overflow: hidden;
     text-align: center;
     height: 110px;
-    margin: 20px 0 10px 0;
+    padding: 10px 0;
+    margin: 0px 0 10px 0;
   }
 
   #SINTECLogo {
@@ -67,7 +68,7 @@ export default {
 
     #logoContainer {
       height: 40px;
-      margin: 10px 0 0 0;
+      margin: 0px 0 0 0;
     }
 
     h3, h4 {
@@ -75,7 +76,7 @@ export default {
       text-shadow: none !important;
     }
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.0rem;
     }
     h4 {
       font-size: 1rem;

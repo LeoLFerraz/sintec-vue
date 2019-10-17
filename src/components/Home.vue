@@ -2,7 +2,7 @@
   <div class="layout-default rounded-bottom" id="HomeContainer">
     <div class="homeCardContainer">
       <div class="row no-gutters">
-        <HomeCard titulo="Calendário" icon="calendar-alt" link="/calendario" />
+        <HomeCard titulo="Calendário Detalhado" icon="calendar-alt" link="/calendario" />
         <HomeCard titulo="Inscrever-se" icon="user-plus" link="/inscricao" />
         <HomeCard titulo="Sobre o Evento" icon="book-open" link="/sobre" />
       </div>
@@ -34,15 +34,6 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  .homeColumn {
-    overflow: hidden;
-    padding: 30px 15px;
-  }
-
-  .homeCardContainer {
-    flex: 1;
   }
 
   @media only screen and (min-width: 769px) {

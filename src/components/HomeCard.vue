@@ -1,16 +1,12 @@
 <template>
-  <div class="col-lg-4 col-md-12 homeColumn">
-    <div class="container-fluid d-flex flex-column align-items-center align-content-center justify-content-center">
-      <div class="container-fluid linkIconContainer">
-        <router-link :to="link">
-          <font-awesome-layers full-width class="fa-10x container-fluid">
+  <router-link :to="link" class="col-lg-4 col-md-12 homeColumn">
+      <div class="linkIconContainer">
+          <font-awesome-layers full-width class="fa-5x">
             <font-awesome-icon :icon="icon" class="homeCardIcon"/>
             <font-awesome-layers-text class="texto" :value="titulo" />
           </font-awesome-layers>
-        </router-link>
       </div>
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -29,9 +25,14 @@ export default {
     background-color: rgba(150,120,130,0.5);
     border-bottom: solid 8px rgb(150,120,130);
   }
+
+  .homeColumn {
+
+  }
+
   .homeCardIcon {
     color: rgba(255,255,255,0.2);
-    width: 100%;
+    width: 70%;
     max-width: 150px;
     height: auto;
   }
@@ -43,7 +44,7 @@ export default {
     font-weight: bold;
     white-space: nowrap;
     text-shadow: 8px 8px 35px #000000;
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
 
   .homeColumn:nth-child(even):hover {
