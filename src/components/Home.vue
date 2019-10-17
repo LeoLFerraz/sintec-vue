@@ -2,7 +2,7 @@
   <div class="layout-default rounded-bottom" id="HomeContainer">
     <div class="homeCardContainer">
       <div class="row no-gutters">
-        <HomeCard titulo="Calendário Detalhado" icon="calendar-alt" link="/calendario" />
+        <HomeCard titulo="Calendário" icon="calendar-alt" link="/calendario" />
         <HomeCard titulo="Inscrever-se" icon="user-plus" link="/inscricao" />
         <HomeCard titulo="Sobre o Evento" icon="book-open" link="/sobre" />
       </div>

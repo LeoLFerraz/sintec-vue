@@ -67,7 +67,7 @@ export default {
     }
 
     #logoContainer {
-      height: 40px;
+      height: 55px;
       margin: 0px 0 0 0;
     }
 
@@ -79,14 +79,10 @@ export default {
       font-size: 1.0rem;
     }
     h4 {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
     hr {
       display: none;
-    }
-
-    .subtitle {
-      margin-bottom: 2px;
     }
   }
 </style>

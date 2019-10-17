@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="link" class="col-lg-4 col-md-12 homeColumn">
+  <router-link :to="link" class="col-4 homeColumn">
       <div class="linkIconContainer">
-          <font-awesome-layers full-width class="fa-5x">
+          <font-awesome-layers full-width class="fa-5x layerContainer">
             <font-awesome-icon :icon="icon" class="homeCardIcon"/>
             <font-awesome-layers-text class="texto" :value="titulo" />
           </font-awesome-layers>
@@ -26,16 +26,13 @@ export default {
     border-bottom: solid 8px rgb(150,120,130);
   }
 
-  .homeColumn {
-
-  }
-
   .homeCardIcon {
     color: rgba(255,255,255,0.2);
     width: 70%;
     max-width: 150px;
     height: auto;
   }
+
   .linkIconContainer{
     text-align: center;
   }
@@ -56,15 +53,19 @@ export default {
 
   @media only screen and (max-width:768px) {
     .texto {
-      font-size: 2rem;
+      font-size: 1rem;
+    }
+
+    .layerContainer {
+      width: 100%;
     }
 
     .homeCardIcon {
-      max-width: 75px;
+      max-width: 40px;
     }
 
     .homeColumn {
-      padding: 5px;
+      padding: 0px;
     }
   }
 </style>
